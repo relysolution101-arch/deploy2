@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tax Deadlines & Updates – Rely FinTech Solutions Mumbai">
+  <title>Updates & Deadlines | Rely FinTech Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="logo-wrap">
+        <span class="logo-name">Rely FinTech Solutions</span>
+        <span class="logo-sub">Payroll &amp; Compliance · Mumbai</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#calendar">Calendar</a></li>
+        <li><a href="updates.html" class="updates-link active">📢 Updates</a></li>
+        <li><a href="index.html#contact" class="cta">Get Started</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="updates-hero">
+    <div class="hero-eyebrow">📢 Live Updates</div>
+    <h1>Tax Deadlines &amp; <em style="color:var(--teal2);font-style:normal;">Compliance News</em></h1>
+    <p>Stay ahead of every due date. Updated regularly by Rely FinTech Solutions.</p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       DEADLINE CARDS — HOW TO ADD A NEW ONE:
+       1. Copy any .deadline-card block below
+       2. Paste inside .deadlines-grid
+       3. Update data-deadline="YYYY-MM-DD", title, date text, desc
+       4. Add a new id="countdown-N" (increment N)
+       5. Use class="deadline-card urgent" for red/urgent cards
+       6. Use class="deadline-card done"   for expired deadlines
+  ══════════════════════════════════════════════════ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-tag">Due Dates</div>
+      <h2 class="section-heading">Upcoming <em>Compliance Deadlines</em></h2>
+      <p class="section-sub">Live countdowns to every key filing date. We manage all of these for our clients.</p>
+
+      <div class="deadlines-grid">
+
+        <!-- CARD 0 — ITR Filing (URGENT) -->
+        <div class="deadline-card urgent" data-deadline="2026-07-31">
+          <span class="deadline-tag">🚨 Urgent</span>
+          <div class="deadline-title">Income Tax Return (ITR) Filing</div>
+          <div class="deadline-date">📅 Due: 31 July 2026</div>
+          <p class="deadline-desc">File your ITR for FY 2025-26 before the deadline. Late filing attracts a penalty of ₹5,000. Starting at just ₹200.</p>
+          <div class="mini-countdown" id="countdown-0"></div>
+        </div>
+
+        <!-- CARD 1 — TDS Return Q1 -->
+        <div class="deadline-card urgent" data-deadline="2026-07-31">
+          <span class="deadline-tag">TDS</span>
+          <div class="deadline-title">TDS Return – Q1 (Apr–Jun 2026)</div>
+          <div class="deadline-date">📅 Due: 31 July 2026</div>
+          <p class="deadline-desc">Quarterly TDS return (Form 24Q / 26Q) for the period April to June 2026.</p>
+          <div class="mini-countdown" id="countdown-1"></div>
+        </div>
+
+        <!-- CARD 2 — PF/ESIC July -->
+        <div class="deadline-card" data-deadline="2026-07-15">
+          <span class="deadline-tag">PF / ESIC</span>
+          <div class="deadline-title">PF &amp; ESIC Payment – June 2026</div>
+          <div class="deadline-date">📅 Due: 15 July 2026</div>
+          <p class="deadline-desc">Monthly PF (ECR) and ESIC challan payment for the month of June 2026.</p>
+          <div class="mini-countdown" id="countdown-2"></div>
+        </div>
+
+        <!-- CARD 3 — PT Maharashtra -->
+        <div class="deadline-card" data-deadline="2026-07-31">
+          <span class="deadline-tag">Profession Tax</span>
+          <div class="deadline-title">PT Return – June 2026 (Maharashtra)</div>
+          <div class="deadline-date">📅 Due: 31 July 2026</div>
+          <p class="deadline-desc">Maharashtra Profession Tax monthly return and challan for employers for the month of June 2026.</p>
+          <div class="mini-countdown" id="countdown-3"></div>
+        </div>
+
+        <!-- CARD 4 — TDS Deposit July -->
+        <div class="deadline-card" data-deadline="2026-08-07">
+          <span class="deadline-tag">TDS</span>
+          <div class="deadline-title">TDS Deposit – July 2026</div>
+          <div class="deadline-date">📅 Due: 7 August 2026</div>
+          <p class="deadline-desc">Monthly TDS challan u/s 192 (salary) deposit to government via the income tax portal.</p>
+          <div class="mini-countdown" id="countdown-4"></div>
+        </div>
+
+        <!-- CARD 5 — PF/ESIC August -->
+        <div class="deadline-card" data-deadline="2026-08-15">
+          <span class="deadline-tag">PF / ESIC</span>
+          <div class="deadline-title">PF &amp; ESIC Payment – July 2026</div>
+          <div class="deadline-date">📅 Due: 15 August 2026</div>
+          <p class="deadline-desc">Monthly PF (ECR) and ESIC challan payment for the month of July 2026.</p>
+          <div class="mini-countdown" id="countdown-5"></div>
+        </div>
+
+        <!-- ══ ADD NEW CARDS ABOVE THIS COMMENT ══
+        <div class="deadline-card" data-deadline="YYYY-MM-DD">
+          <span class="deadline-tag">Label</span>
+          <div class="deadline-title">Title Here</div>
+          <div class="deadline-date">📅 Due: DD Month YYYY</div>
+          <p class="deadline-desc">Description.</p>
+          <div class="mini-countdown" id="countdown-6"></div>
+        </div>
+        ══ END ADD NEW CARDS ══ -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       NEWS FEED — HOW TO ADD A NEW UPDATE:
+       1. Copy one .news-item block
+       2. Paste it at the TOP of .news-list (most recent first)
+       3. Update the day, month, heading, and paragraph
+       4. Use class="news-item important" for high-priority items
+  ══════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-tag">Latest Updates</div>
+      <h2 class="section-heading">News &amp; <em>Compliance Alerts</em></h2>
+      <p class="section-sub">Important notifications, deadline reminders, and regulatory changes — all in one place.</p>
+
+      <div class="news-list">
+
+        <!-- UPDATE — most recent at top -->
+        <div class="news-item important">
+          <div class="news-date-box">
+            <div class="news-date-day">27</div>
+            <div class="news-date-month">Jun 2026</div>
+          </div>
+          <div class="news-body">
+            <h4>🚨 34 Days Left to File ITR – Don't Pay the ₹5,000 Penalty</h4>
+            <p>The last date to file Income Tax Return for FY 2025-26 is 31 July 2026. File today starting at just ₹200. WhatsApp Chetan to get started — we respond within 24 hours.</p>
+          </div>
+        </div>
+
+        <div class="news-item important">
+          <div class="news-date-box">
+            <div class="news-date-day">27</div>
+            <div class="news-date-month">Jun 2026</div>
+          </div>
+          <div class="news-body">
+            <h4>🚨 TDS Q1 Return (24Q) Also Due 31 July 2026</h4>
+            <p>If you have employees and deduct TDS on salary, the Q1 return (April–June 2026) is due 31 July. Late filing fee is ₹200/day. Contact us for hassle-free filing.</p>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-date-box">
+            <div class="news-date-day">20</div>
+            <div class="news-date-month">Jun 2026</div>
+          </div>
+          <div class="news-body">
+            <h4>New Tax Regime is Now Default for FY 2025-26</h4>
+            <p>From this year, the new tax regime is the default for individual taxpayers. You must actively opt for the old regime during ITR filing if it benefits you more. Speak with us to calculate which regime saves you more tax.</p>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-date-box">
+            <div class="news-date-day">10</div>
+            <div class="news-date-month">Jun 2026</div>
+          </div>
+          <div class="news-body">
+            <h4>Form 16 (Part A &amp; B) Deadline Was 15 June</h4>
+            <p>Employers were required to issue Form 16 to all employees by 15 June 2026. If you have not issued it yet, contact us immediately to avoid non-compliance penalties.</p>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-date-box">
+            <div class="news-date-day">01</div>
+            <div class="news-date-month">Jun 2026</div>
+          </div>
+          <div class="news-body">
+            <h4>PF Wage Ceiling Expected to Increase – Stay Tuned</h4>
+            <p>The EPFO is deliberating an increase in the PF wage ceiling from ₹15,000 to ₹21,000. Once notified, this will impact employer contribution amounts. We will update clients as soon as the official circular is released.</p>
+          </div>
+        </div>
+
+        <!-- ══ ADD NEW UPDATES ABOVE THIS LINE ══
+        <div class="news-item">
+          <div class="news-date-box">
+            <div class="news-date-day">DD</div>
+            <div class="news-date-month">Mon YYYY</div>
+          </div>
+          <div class="news-body">
+            <h4>Your Heading Here</h4>
+            <p>Update details here.</p>
+          </div>
+        </div>
+        ══ END ADD NEW UPDATES ══ -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="updates-cta">
+    <div class="container">
+      <h2>We Handle Every Deadline.<br><em style="color:var(--teal2);font-style:normal;">So You Never Have To.</em></h2>
+      <p>Join businesses across Mumbai who trust Rely FinTech Solutions for 100% on-time compliance.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/919136366541?text=Hi%20Chetan%2C%20I%20want%20to%20know%20more%20about%20your%20compliance%20services." class="whatsapp-btn" target="_blank">
+          💬 Chat on WhatsApp
+        </a>
+        <a href="index.html#contact" class="btn-ghost">Send an Enquiry →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <span class="logo-name">Rely FinTech Solutions</span>
+          <span class="logo-sub">Payroll &amp; Compliance Services · Mumbai, Maharashtra</span>
+        </div>
+        <p style="margin-top:1rem;">Helping Mumbai businesses stay compliant — on time, every time.</p>
+      </div>
+      <div>
+        <p style="font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.8rem;color:var(--slate);">Quick Links</p>
+        <div class="footer-links">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#calendar">Calendar</a>
+          <a href="updates.html">📢 Updates</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Rely FinTech Solutions. All rights reserved.</p>
+      <p>Chetan Mehta | +91 9136366541</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function startCountdown(containerId, deadlineStr) {
+      const el = document.getElementById(containerId);
+      if (!el) return;
+      function tick() {
+        const diff = new Date(deadlineStr + 'T23:59:59').getTime() - Date.now();
+        if (diff <= 0) {
+          el.innerHTML = '<span style="font-size:.85rem;color:var(--slate);font-weight:600;">⏰ Deadline Passed</span>';
+          return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        el.innerHTML = ['Days','Hrs','Min','Sec'].map((u,i) =>
+          `<div class="mini-cd-item"><span class="mini-num">${pad([d,h,m,s][i])}</span><span class="mini-unit">${u}</span></div>`
+        ).join('');
+      }
+      tick();
+      setInterval(tick, 1000);
+    }
+
+    document.querySelectorAll('.deadline-card[data-deadline]').forEach((card, i) => {
+      startCountdown('countdown-' + i, card.getAttribute('data-deadline'));
+    });
+  </script>
+
+</body>
+</html>
